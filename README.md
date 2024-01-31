@@ -1,4 +1,5 @@
-PALINDROME
+## PALINDROME
+
 Palindrome is a Epitech synthesis project. The goal of this project is to find the smallest number of operations to transform a number into a palindrome.
 This project has a few flags
 
@@ -8,16 +9,16 @@ This project has a few flags
 -imin: Minimum number of iterations, included (>= 0), which is equal to 0 by default
 -imax: Maximum number of iterations, included (>= 0), which is equal to 100 by default
 
-Example:
+## Example:
 ./palindrome -n 10 -b 10 -imin 0 -imax 100
 
 10 leads to 1 in 1 iteration(s) in base 10
 
-Usage:
+## Usage:
 ./palindrome -n number -p palindrome [-b base] [-imin i] [-imax i]
 ./palindrome -h
 
-Description:
+## Description:
 -n n       integer to be transformed (>=0)
 -p pal     palindromic number to be obtained (incompatible with the -n option) (>=0)
             if defined, all fitting values of n will be output
