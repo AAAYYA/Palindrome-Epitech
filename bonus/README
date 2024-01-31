@@ -1,0 +1,35 @@
+Welcome to the bonus version of the palindrome project.
+In this version I added a few new features not present in the original version, here is a list:
+
+- New flag: -l, lists all the steps before obtaining the final result of the palindrome, simply add -l at the end of your arguments to make it work.
+- New flag: -r, works like -n except it does a palindrome on a random number
+            Usage: ./palindrome -r || --random [optional flags]
+            Warning: You can get no solution from this flag, it's normal because of the random number, simply run the program and  flag again.
+- New flag: -o, saves the output to a file you can name.
+            Usage: ./palindrome [flags] -o || --save
+- New flag: -c, counts all the steps in the list of steps using the -l.
+            Usage: ./palindrome [flags] -l -c || --count
+- New colors: The output is slightly different from the previous one, you will see a few new colors on the output to make it look prettier.
+- New error management: The error management will now specify you the flag you entered is missing arguments instead of displaying simply "invalid argument".
+
+
+
+
+
+How did I add these bonuses:
+
+Flags:
+
+-l: I saved the values of the -p when I do it before printing the result, worked well with the -n, saving the results helped me to fix it for the -p
+-r: I added a simple "srand" using time %5000 to get a random number between 0 and 4999, I then replaced the variable used with the -n with this new value
+-o: I wrote a simple function that saves stdout into a file. I had a few issues because of the colors, the file's content was completely messed up because of the
+    colors. The only way for me to fix it was with a boolean I set to true when the -o is used and false when not, this bool will write a different message in the
+    file
+-c: I added a bool, I give it the true value when the r flag is used and the c flag is used, a variable is increased everytime the -l prints a step, if both bools are
+    true, it prints the total number of steps
+
+Features:
+
+Colors: I used ANSI colors which is a specific code to change the color of an output to another chosen one. I then changed the color inside the printf
+Error management: I simply changed the way I get the arguments, it was from then not an issue to add a specific error message to each flag
+
