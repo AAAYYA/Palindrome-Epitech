@@ -1,5 +1,4 @@
-#PALINDROME
-
+PALINDROME
 Palindrome is a Epitech synthesis project. The goal of this project is to find the smallest number of operations to transform a number into a palindrome.
 This project has a few flags
 
